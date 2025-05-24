@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiAppAula0705.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiAppAula0705"
+    Shell.FlyoutBehavior="Disabled"
+    Title="MauiAppAula0705">
+    <ShellContent
+        Title="Página Foto"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="PaginaFoto" />
+
+</Shell>

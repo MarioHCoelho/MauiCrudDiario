@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppAula0705.MainPage"
+             Title="Daily Entry">
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            
+            <Image x:Name="imageFoto" 
+                   Aspect="AspectFill" 
+                   MaximumHeightRequest="300" 
+                   MaximumWidthRequest="300"
+                   BackgroundColor="LightGray"/>
+            
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Button 
+                    x:Name="btnDelete" 
+                    Text="Excluir Foto"
+                    Clicked="BtnDelete_OnClicked"/>
+                <Button 
+                    x:Name="btnTirarFoto" 
+                    Text="Tirar Foto" 
+                    Clicked="btnTirarFoto_Clicked"/>
+                <Button 
+                    x:Name="btnSelecionarFoto" 
+                    Text="Selecionar Foto" 
+                    Clicked="btnSelecionarFoto_Clicked_1"/>
+            </HorizontalStackLayout>
+            <Entry x:Name="entryComentario" 
+                   Placeholder="Adicionar um comentário"    Margin="0,10"/>
+            <Button Text="Salvar Postagem"
+                    TextColor="White"
+                    Clicked="OnSalvarPostagem"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
