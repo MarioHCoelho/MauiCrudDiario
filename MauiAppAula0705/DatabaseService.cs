@@ -28,11 +28,9 @@ public class DatabaseService
         var postagem = await _database.Table<Postagem>().Where(p => p.Id == id).FirstOrDefaultAsync();
         if (postagem != null)
         {
-            // Remove o arquivo da foto
-            if (File.Exists(postagem.FotoCaminho))
-                File.Delete(postagem.FotoCaminho);
-        
+            try { File.Delete(postagem.FotoCaminho); } catch { }
             await _database.DeleteAsync(postagem);
+            
         }
     }
 }
